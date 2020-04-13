@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="576.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cjt.library.view.ManagerView">
+   <children>
+      <Label layoutX="264.0" layoutY="8.0" prefHeight="66.0" prefWidth="356.0" text="图书馆座位预定系统">
+         <font>
+            <Font name="Microsoft YaHei" size="25.0" />
+         </font></Label>
+      <Button fx:id="button2" layoutX="635.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="结束" />
+      <Button fx:id="button1" layoutX="20.0" layoutY="82.0" mnemonicParsing="false" onAction="#seatCondition" prefHeight="36.0" prefWidth="96.0" text="座位情况" />
+      <TableView fx:id="table1" layoutX="150.0" layoutY="74.0" prefHeight="308.0" prefWidth="551.0">
+        <columns>
+          <TableColumn fx:id="column1" prefWidth="64.0" text="编号" />
+          <TableColumn fx:id="column2" prefWidth="106.0" text="状态" />
+            <TableColumn fx:id="column3" prefWidth="116.0" text="位置" />
+            <TableColumn fx:id="column4" prefWidth="116.0" text="评分" />
+        </columns>
+      </TableView>
+      <MenuButton layoutX="14.0" layoutY="353.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="121.0" text="新增座位">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#add1" text="靠窗" />
+          <MenuItem mnemonicParsing="false" onAction="#add2" text="靠走道" />
+            <MenuItem mnemonicParsing="false" onAction="#add3" text="电脑" />
+            <MenuItem mnemonicParsing="false" onAction="#add4" text="沙发" />
+        </items>
+      </MenuButton>
+      <TableView fx:id="table2" layoutX="148.0" layoutY="389.0" prefHeight="180.0" prefWidth="557.0">
+        <columns>
+          <TableColumn fx:id="column6" prefWidth="179.0" text="图片" />
+          <TableColumn fx:id="column7" prefWidth="377.0" text="评论" />
+        </columns>
+      </TableView>
+      <Button fx:id="button3" layoutX="27.0" layoutY="234.0" mnemonicParsing="false" onAction="#delete" text="删除座位" />
+      <TextField fx:id="deleteText" layoutX="11.0" layoutY="192.0" prefHeight="36.0" prefWidth="127.0" promptText="要删除座位的编号">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

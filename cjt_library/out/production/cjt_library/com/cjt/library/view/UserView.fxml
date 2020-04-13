@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="576.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cjt.library.view.UserView">
+    <children>
+        <Label layoutX="230.0" layoutY="8.0" prefHeight="66.0" prefWidth="390.0" text="图书馆座位预定系统">
+            <font>
+                <Font name="Microsoft YaHei" size="29.0" />
+            </font>
+         <textFill>
+            <RadialGradient centerX="0.4884393063583815" centerY="0.5" radius="0.9050632911392404">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+        <Button fx:id="button2" layoutX="615.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="36.0" prefWidth="96.0" text="返回" />
+        <Button fx:id="button1" layoutX="68.0" layoutY="83.0" mnemonicParsing="false" onAction="#seatCondition" prefHeight="36.0" prefWidth="96.0" text="座位情况" />
+        <TableView fx:id="table1" layoutX="256.0" layoutY="74.0" prefHeight="308.0" prefWidth="446.0">
+            <columns>
+                <TableColumn fx:id="column1" prefWidth="64.0" text="编号" />
+                <TableColumn fx:id="column2" minWidth="0.0" prefWidth="160.0" text="状态" />
+                <TableColumn fx:id="column3" minWidth="0.0" prefWidth="117.0" text="位置" />
+                <TableColumn fx:id="column4" prefWidth="111.0" text="评分" />
+            </columns>
+        </TableView>
+        <TableView fx:id="table2" layoutX="252.0" layoutY="389.0" prefHeight="180.0" prefWidth="453.0">
+            <columns>
+                <TableColumn fx:id="column6" prefWidth="179.0" text="图片" />
+                <TableColumn fx:id="column7" prefWidth="377.0" text="评论" />
+            </columns>
+        </TableView>
+        <Button fx:id="button3" layoutX="68.0" layoutY="252.0" mnemonicParsing="false" onAction="#order" text="预约座位" />
+        <TextField fx:id="orderText" layoutX="46.0" layoutY="204.0" prefHeight="36.0" prefWidth="140.0" promptText="要预约座位的编号">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+      <TextField fx:id="cancelText" layoutX="46.0" layoutY="396.0" prefHeight="36.0" prefWidth="140.0" promptText="要取消预约座位的编号">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="button4" layoutX="68.0" layoutY="443.0" mnemonicParsing="false" onAction="#cancel" text="取消预约" />
+      <DatePicker fx:id="datepicker" layoutX="11.0" layoutY="154.0" prefHeight="36.0" prefWidth="233.0" promptText="请设置预约的日期" />
+      <Button fx:id="useseat" layoutX="33.0" layoutY="319.0" mnemonicParsing="false" onAction="#useSeat" prefHeight="36.0" prefWidth="166.0" text="使用座位" />
+    </children>
+</AnchorPane>
